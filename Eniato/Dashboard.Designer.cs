@@ -31,192 +31,503 @@ namespace Eniato
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.painelHeader = new System.Windows.Forms.Panel();
+            this.statusStripInformacoes = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelLicensa = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tableLayoutPanelLateral = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonLancarDespesa = new System.Windows.Forms.Button();
+            this.buttonLancarRecebimento = new System.Windows.Forms.Button();
+            this.buttonChequesRecebidos = new System.Windows.Forms.Button();
+            this.buttonChequesEmitidos = new System.Windows.Forms.Button();
+            this.buttonConfiguracao = new System.Windows.Forms.Button();
+            this.tableLayoutPanelCentral = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewContasAPagar = new System.Windows.Forms.DataGridView();
+            this.panelLancamentoBalcao = new System.Windows.Forms.Panel();
+            this.buttonLancarRecebimentoBalcao = new System.Windows.Forms.Button();
+            this.maskedTextBoxDatadoPara = new System.Windows.Forms.MaskedTextBox();
+            this.labelDatadoPara = new System.Windows.Forms.Label();
+            this.textBoxNumeroCheque = new System.Windows.Forms.TextBox();
+            this.textBoxNumeroAgencia = new System.Windows.Forms.TextBox();
+            this.textBoxNumeroBanco = new System.Windows.Forms.TextBox();
+            this.labelNumeroCheque = new System.Windows.Forms.Label();
+            this.labelNumeroAgencia = new System.Windows.Forms.Label();
+            this.labelNumeroBanco = new System.Windows.Forms.Label();
+            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
+            this.comboBoxMetodoDePagamento = new System.Windows.Forms.ComboBox();
+            this.labelMetodoDePagamento = new System.Windows.Forms.Label();
+            this.labelNaoPossuaTicket = new System.Windows.Forms.Label();
+            this.labelTroco = new System.Windows.Forms.Label();
+            this.textBoxDesconto = new System.Windows.Forms.TextBox();
+            this.labelDesconto = new System.Windows.Forms.Label();
+            this.textBoxValorRecebido = new System.Windows.Forms.TextBox();
+            this.labelValorRecebido = new System.Windows.Forms.Label();
+            this.labelValorTotal = new System.Windows.Forms.Label();
+            this.textBoxNumeroTicket = new System.Windows.Forms.TextBox();
+            this.labelNumeroDoTicket = new System.Windows.Forms.Label();
+            this.subtituloLancamentoBalcao = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelHeader = new System.Windows.Forms.Panel();
             this.panelTituloSistema = new System.Windows.Forms.Panel();
             this.labelTituloSistema = new System.Windows.Forms.Label();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.statusStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.painelHeader.SuspendLayout();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStripInformacoes.SuspendLayout();
+            this.tableLayoutPanelLateral.SuspendLayout();
+            this.tableLayoutPanelCentral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContasAPagar)).BeginInit();
+            this.panelLancamentoBalcao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelHeader.SuspendLayout();
             this.panelTituloSistema.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // statusStrip1
+            // statusStripInformacoes
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 692);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1732, 26);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStripInformacoes.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStripInformacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelLicensa});
+            this.statusStripInformacoes.Location = new System.Drawing.Point(0, 868);
+            this.statusStripInformacoes.Name = "statusStripInformacoes";
+            this.statusStripInformacoes.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStripInformacoes.Size = new System.Drawing.Size(1732, 26);
+            this.statusStripInformacoes.TabIndex = 0;
+            this.statusStripInformacoes.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabelLicensa
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(371, 20);
-            this.toolStripStatusLabel1.Text = "Licenciado para Serviço Notarial e Registral de Altônia";
+            this.toolStripStatusLabelLicensa.Name = "toolStripStatusLabelLicensa";
+            this.toolStripStatusLabelLicensa.Size = new System.Drawing.Size(371, 20);
+            this.toolStripStatusLabelLicensa.Text = "Licenciado para Serviço Notarial e Registral de Altônia";
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelLateral
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanelLateral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 89);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(58, 604);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanelLateral.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanelLateral.ColumnCount = 1;
+            this.tableLayoutPanelLateral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLateral.Controls.Add(this.buttonLancarDespesa, 0, 1);
+            this.tableLayoutPanelLateral.Controls.Add(this.buttonLancarRecebimento, 0, 0);
+            this.tableLayoutPanelLateral.Controls.Add(this.buttonChequesRecebidos, 0, 2);
+            this.tableLayoutPanelLateral.Controls.Add(this.buttonChequesEmitidos, 0, 3);
+            this.tableLayoutPanelLateral.Controls.Add(this.buttonConfiguracao, 0, 4);
+            this.tableLayoutPanelLateral.Location = new System.Drawing.Point(0, 89);
+            this.tableLayoutPanelLateral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanelLateral.Name = "tableLayoutPanelLateral";
+            this.tableLayoutPanelLateral.RowCount = 6;
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanelLateral.Size = new System.Drawing.Size(58, 780);
+            this.tableLayoutPanelLateral.TabIndex = 1;
             // 
-            // button2
+            // buttonLancarDespesa
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Eniato.Properties.Resources.Asset_3pagar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(3, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 145);
-            this.button2.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.button2, "Clique aqui para lançar uma despesa");
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonLancarDespesa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLancarDespesa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.buttonLancarDespesa.FlatAppearance.BorderSize = 2;
+            this.buttonLancarDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLancarDespesa.Image = global::Eniato.Properties.Resources.Asset_3pagar;
+            this.buttonLancarDespesa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonLancarDespesa.Location = new System.Drawing.Point(3, 132);
+            this.buttonLancarDespesa.Name = "buttonLancarDespesa";
+            this.buttonLancarDespesa.Size = new System.Drawing.Size(52, 123);
+            this.buttonLancarDespesa.TabIndex = 7;
+            this.toolTip.SetToolTip(this.buttonLancarDespesa, "Clique aqui para lançar uma despesa");
+            this.buttonLancarDespesa.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonLancarRecebimento
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonLancarRecebimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(69)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Eniato.Properties.Resources.Asset_2receber;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 145);
-            this.button1.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.button1, "Clique aqui para lançar um recebimento");
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLancarRecebimento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(69)))));
+            this.buttonLancarRecebimento.FlatAppearance.BorderSize = 2;
+            this.buttonLancarRecebimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLancarRecebimento.Image = global::Eniato.Properties.Resources.Asset_2receber;
+            this.buttonLancarRecebimento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonLancarRecebimento.Location = new System.Drawing.Point(3, 3);
+            this.buttonLancarRecebimento.Name = "buttonLancarRecebimento";
+            this.buttonLancarRecebimento.Size = new System.Drawing.Size(52, 123);
+            this.buttonLancarRecebimento.TabIndex = 6;
+            this.toolTip.SetToolTip(this.buttonLancarRecebimento, "Clique aqui para lançar um recebimento");
+            this.buttonLancarRecebimento.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonChequesRecebidos
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonChequesRecebidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(69)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::Eniato.Properties.Resources.Asset_6cheque_recebido;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(3, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(52, 145);
-            this.button3.TabIndex = 8;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonChequesRecebidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(69)))));
+            this.buttonChequesRecebidos.FlatAppearance.BorderSize = 2;
+            this.buttonChequesRecebidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChequesRecebidos.Image = global::Eniato.Properties.Resources.Asset_6cheque_recebido;
+            this.buttonChequesRecebidos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonChequesRecebidos.Location = new System.Drawing.Point(3, 261);
+            this.buttonChequesRecebidos.Name = "buttonChequesRecebidos";
+            this.buttonChequesRecebidos.Size = new System.Drawing.Size(52, 123);
+            this.buttonChequesRecebidos.TabIndex = 8;
+            this.buttonChequesRecebidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip.SetToolTip(this.buttonChequesRecebidos, "Clique aqui para consultar os cheques recebidos");
+            this.buttonChequesRecebidos.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonChequesEmitidos
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonChequesEmitidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Eniato.Properties.Resources.Asset_7cheque_emitido;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(3, 456);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 145);
-            this.button4.TabIndex = 9;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonChequesEmitidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.buttonChequesEmitidos.FlatAppearance.BorderSize = 2;
+            this.buttonChequesEmitidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChequesEmitidos.Image = global::Eniato.Properties.Resources.Asset_7cheque_emitido;
+            this.buttonChequesEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonChequesEmitidos.Location = new System.Drawing.Point(3, 390);
+            this.buttonChequesEmitidos.Name = "buttonChequesEmitidos";
+            this.buttonChequesEmitidos.Size = new System.Drawing.Size(52, 123);
+            this.buttonChequesEmitidos.TabIndex = 9;
+            this.buttonChequesEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip.SetToolTip(this.buttonChequesEmitidos, "Clique aqui para consultar e lançar cheques emitidos");
+            this.buttonChequesEmitidos.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
+            // buttonConfiguracao
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonConfiguracao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.0997F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.9003F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(65, 89);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.16779F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.83221F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1655, 604);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.buttonConfiguracao.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.buttonConfiguracao.FlatAppearance.BorderSize = 2;
+            this.buttonConfiguracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfiguracao.Image = global::Eniato.Properties.Resources.Asset_8configuracao;
+            this.buttonConfiguracao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonConfiguracao.Location = new System.Drawing.Point(3, 519);
+            this.buttonConfiguracao.Name = "buttonConfiguracao";
+            this.buttonConfiguracao.Size = new System.Drawing.Size(52, 123);
+            this.buttonConfiguracao.TabIndex = 10;
+            this.buttonConfiguracao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip.SetToolTip(this.buttonConfiguracao, "Clique aqui para acessar as configurações");
+            this.buttonConfiguracao.UseVisualStyleBackColor = true;
             // 
-            // painelHeader
+            // tableLayoutPanelCentral
             // 
-            this.painelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanelCentral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.painelHeader.AutoSize = true;
-            this.painelHeader.Controls.Add(this.panelTituloSistema);
-            this.painelHeader.Controls.Add(this.panelLogo);
-            this.painelHeader.Location = new System.Drawing.Point(0, 0);
-            this.painelHeader.Name = "painelHeader";
-            this.painelHeader.Size = new System.Drawing.Size(1732, 87);
-            this.painelHeader.TabIndex = 4;
-            this.painelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.painelHeader_paint);
+            this.tableLayoutPanelCentral.ColumnCount = 2;
+            this.tableLayoutPanelCentral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.0997F));
+            this.tableLayoutPanelCentral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.9003F));
+            this.tableLayoutPanelCentral.Controls.Add(this.dataGridViewContasAPagar, 0, 1);
+            this.tableLayoutPanelCentral.Controls.Add(this.panelLancamentoBalcao, 0, 0);
+            this.tableLayoutPanelCentral.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanelCentral.Location = new System.Drawing.Point(65, 89);
+            this.tableLayoutPanelCentral.Name = "tableLayoutPanelCentral";
+            this.tableLayoutPanelCentral.RowCount = 2;
+            this.tableLayoutPanelCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelCentral.Size = new System.Drawing.Size(1655, 780);
+            this.tableLayoutPanelCentral.TabIndex = 3;
+            // 
+            // dataGridViewContasAPagar
+            // 
+            this.dataGridViewContasAPagar.AllowUserToAddRows = false;
+            this.dataGridViewContasAPagar.AllowUserToDeleteRows = false;
+            this.dataGridViewContasAPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContasAPagar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewContasAPagar.Location = new System.Drawing.Point(3, 393);
+            this.dataGridViewContasAPagar.Name = "dataGridViewContasAPagar";
+            this.dataGridViewContasAPagar.ReadOnly = true;
+            this.dataGridViewContasAPagar.RowHeadersWidth = 51;
+            this.dataGridViewContasAPagar.RowTemplate.Height = 24;
+            this.dataGridViewContasAPagar.Size = new System.Drawing.Size(608, 384);
+            this.dataGridViewContasAPagar.TabIndex = 1;
+            // 
+            // panelLancamentoBalcao
+            // 
+            this.panelLancamentoBalcao.BackColor = System.Drawing.Color.White;
+            this.panelLancamentoBalcao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelLancamentoBalcao.Controls.Add(this.buttonLancarRecebimentoBalcao);
+            this.panelLancamentoBalcao.Controls.Add(this.maskedTextBoxDatadoPara);
+            this.panelLancamentoBalcao.Controls.Add(this.labelDatadoPara);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxNumeroCheque);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxNumeroAgencia);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxNumeroBanco);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNumeroCheque);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNumeroAgencia);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNumeroBanco);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxValorTotal);
+            this.panelLancamentoBalcao.Controls.Add(this.comboBoxMetodoDePagamento);
+            this.panelLancamentoBalcao.Controls.Add(this.labelMetodoDePagamento);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNaoPossuaTicket);
+            this.panelLancamentoBalcao.Controls.Add(this.labelTroco);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxDesconto);
+            this.panelLancamentoBalcao.Controls.Add(this.labelDesconto);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxValorRecebido);
+            this.panelLancamentoBalcao.Controls.Add(this.labelValorRecebido);
+            this.panelLancamentoBalcao.Controls.Add(this.labelValorTotal);
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxNumeroTicket);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNumeroDoTicket);
+            this.panelLancamentoBalcao.Controls.Add(this.subtituloLancamentoBalcao);
+            this.panelLancamentoBalcao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLancamentoBalcao.Location = new System.Drawing.Point(3, 3);
+            this.panelLancamentoBalcao.Name = "panelLancamentoBalcao";
+            this.panelLancamentoBalcao.Size = new System.Drawing.Size(608, 384);
+            this.panelLancamentoBalcao.TabIndex = 2;
+            // 
+            // buttonLancarRecebimentoBalcao
+            // 
+            this.buttonLancarRecebimentoBalcao.Location = new System.Drawing.Point(8, 174);
+            this.buttonLancarRecebimentoBalcao.Name = "buttonLancarRecebimentoBalcao";
+            this.buttonLancarRecebimentoBalcao.Size = new System.Drawing.Size(183, 39);
+            this.buttonLancarRecebimentoBalcao.TabIndex = 22;
+            this.buttonLancarRecebimentoBalcao.Text = "Lançar";
+            this.buttonLancarRecebimentoBalcao.UseVisualStyleBackColor = true;
+            this.buttonLancarRecebimentoBalcao.Click += new System.EventHandler(this.buttonLancarRecebimentoBalcao_Click);
+            // 
+            // maskedTextBoxDatadoPara
+            // 
+            this.maskedTextBoxDatadoPara.Location = new System.Drawing.Point(456, 170);
+            this.maskedTextBoxDatadoPara.Mask = "00/00/0000";
+            this.maskedTextBoxDatadoPara.Name = "maskedTextBoxDatadoPara";
+            this.maskedTextBoxDatadoPara.Size = new System.Drawing.Size(118, 30);
+            this.maskedTextBoxDatadoPara.TabIndex = 21;
+            this.maskedTextBoxDatadoPara.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDatadoPara.Visible = false;
+            // 
+            // labelDatadoPara
+            // 
+            this.labelDatadoPara.AutoSize = true;
+            this.labelDatadoPara.Location = new System.Drawing.Point(334, 173);
+            this.labelDatadoPara.Name = "labelDatadoPara";
+            this.labelDatadoPara.Size = new System.Drawing.Size(111, 26);
+            this.labelDatadoPara.TabIndex = 20;
+            this.labelDatadoPara.Text = "Datado para:";
+            this.labelDatadoPara.Visible = false;
+            // 
+            // textBoxNumeroCheque
+            // 
+            this.textBoxNumeroCheque.Location = new System.Drawing.Point(457, 134);
+            this.textBoxNumeroCheque.Name = "textBoxNumeroCheque";
+            this.textBoxNumeroCheque.Size = new System.Drawing.Size(117, 30);
+            this.textBoxNumeroCheque.TabIndex = 19;
+            this.textBoxNumeroCheque.Visible = false;
+            this.textBoxNumeroCheque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // textBoxNumeroAgencia
+            // 
+            this.textBoxNumeroAgencia.Location = new System.Drawing.Point(328, 134);
+            this.textBoxNumeroAgencia.Name = "textBoxNumeroAgencia";
+            this.textBoxNumeroAgencia.Size = new System.Drawing.Size(117, 30);
+            this.textBoxNumeroAgencia.TabIndex = 18;
+            this.textBoxNumeroAgencia.Visible = false;
+            this.textBoxNumeroAgencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // textBoxNumeroBanco
+            // 
+            this.textBoxNumeroBanco.Location = new System.Drawing.Point(211, 134);
+            this.textBoxNumeroBanco.Name = "textBoxNumeroBanco";
+            this.textBoxNumeroBanco.Size = new System.Drawing.Size(100, 30);
+            this.textBoxNumeroBanco.TabIndex = 17;
+            this.textBoxNumeroBanco.Visible = false;
+            this.textBoxNumeroBanco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // labelNumeroCheque
+            // 
+            this.labelNumeroCheque.AutoSize = true;
+            this.labelNumeroCheque.Location = new System.Drawing.Point(451, 109);
+            this.labelNumeroCheque.Name = "labelNumeroCheque";
+            this.labelNumeroCheque.Size = new System.Drawing.Size(120, 26);
+            this.labelNumeroCheque.TabIndex = 16;
+            this.labelNumeroCheque.Text = "N° do Cheque:";
+            this.labelNumeroCheque.Visible = false;
+            // 
+            // labelNumeroAgencia
+            // 
+            this.labelNumeroAgencia.AutoSize = true;
+            this.labelNumeroAgencia.Location = new System.Drawing.Point(323, 109);
+            this.labelNumeroAgencia.Name = "labelNumeroAgencia";
+            this.labelNumeroAgencia.Size = new System.Drawing.Size(122, 26);
+            this.labelNumeroAgencia.TabIndex = 15;
+            this.labelNumeroAgencia.Text = "N° da Agência:";
+            this.labelNumeroAgencia.Visible = false;
+            // 
+            // labelNumeroBanco
+            // 
+            this.labelNumeroBanco.AutoSize = true;
+            this.labelNumeroBanco.Location = new System.Drawing.Point(206, 109);
+            this.labelNumeroBanco.Name = "labelNumeroBanco";
+            this.labelNumeroBanco.Size = new System.Drawing.Size(108, 26);
+            this.labelNumeroBanco.TabIndex = 14;
+            this.labelNumeroBanco.Text = "N° do Banco:";
+            this.labelNumeroBanco.Visible = false;
+            // 
+            // textBoxValorTotal
+            // 
+            this.textBoxValorTotal.Location = new System.Drawing.Point(144, 61);
+            this.textBoxValorTotal.Name = "textBoxValorTotal";
+            this.textBoxValorTotal.Size = new System.Drawing.Size(121, 30);
+            this.textBoxValorTotal.TabIndex = 13;
+            this.textBoxValorTotal.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
+            this.textBoxValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // comboBoxMetodoDePagamento
+            // 
+            this.comboBoxMetodoDePagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMetodoDePagamento.FormattingEnabled = true;
+            this.comboBoxMetodoDePagamento.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cartão",
+            "Pix",
+            "Cheque",
+            "Outro"});
+            this.comboBoxMetodoDePagamento.Location = new System.Drawing.Point(8, 134);
+            this.comboBoxMetodoDePagamento.Name = "comboBoxMetodoDePagamento";
+            this.comboBoxMetodoDePagamento.Size = new System.Drawing.Size(183, 34);
+            this.comboBoxMetodoDePagamento.TabIndex = 5;
+            this.comboBoxMetodoDePagamento.TextChanged += new System.EventHandler(this.comboBoxMetodoDePagamento_TextUpdate);
+            // 
+            // labelMetodoDePagamento
+            // 
+            this.labelMetodoDePagamento.AutoSize = true;
+            this.labelMetodoDePagamento.Location = new System.Drawing.Point(3, 109);
+            this.labelMetodoDePagamento.Name = "labelMetodoDePagamento";
+            this.labelMetodoDePagamento.Size = new System.Drawing.Size(188, 26);
+            this.labelMetodoDePagamento.TabIndex = 12;
+            this.labelMetodoDePagamento.Text = "Método de pagamento:";
+            // 
+            // labelNaoPossuaTicket
+            // 
+            this.labelNaoPossuaTicket.AutoSize = true;
+            this.labelNaoPossuaTicket.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelNaoPossuaTicket.Font = new System.Drawing.Font("Poppins", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNaoPossuaTicket.ForeColor = System.Drawing.Color.Gray;
+            this.labelNaoPossuaTicket.Location = new System.Drawing.Point(0, 360);
+            this.labelNaoPossuaTicket.Name = "labelNaoPossuaTicket";
+            this.labelNaoPossuaTicket.Size = new System.Drawing.Size(512, 22);
+            this.labelNaoPossuaTicket.TabIndex = 11;
+            this.labelNaoPossuaTicket.Text = "Caso o lançamento não possua ticket no Assina, desconsidere o campo N° do Ticket." +
+    "";
+            // 
+            // labelTroco
+            // 
+            this.labelTroco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTroco.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTroco.ForeColor = System.Drawing.Color.Red;
+            this.labelTroco.Location = new System.Drawing.Point(3, 301);
+            this.labelTroco.Name = "labelTroco";
+            this.labelTroco.Size = new System.Drawing.Size(575, 59);
+            this.labelTroco.TabIndex = 10;
+            this.labelTroco.Text = "Atenção: Você precisa retornar {dinheiro.retorno} ao cliente e ter certeza que en" +
+    "trou {dinheiro.recebido} no caixa.";
+            this.labelTroco.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelTroco.Visible = false;
+            // 
+            // textBoxDesconto
+            // 
+            this.textBoxDesconto.Location = new System.Drawing.Point(457, 61);
+            this.textBoxDesconto.Name = "textBoxDesconto";
+            this.textBoxDesconto.Size = new System.Drawing.Size(121, 30);
+            this.textBoxDesconto.TabIndex = 4;
+            this.textBoxDesconto.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
+            this.textBoxDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // labelDesconto
+            // 
+            this.labelDesconto.AutoSize = true;
+            this.labelDesconto.Location = new System.Drawing.Point(452, 38);
+            this.labelDesconto.Name = "labelDesconto";
+            this.labelDesconto.Size = new System.Drawing.Size(87, 26);
+            this.labelDesconto.TabIndex = 8;
+            this.labelDesconto.Text = "Desconto:";
+            // 
+            // textBoxValorRecebido
+            // 
+            this.textBoxValorRecebido.Location = new System.Drawing.Point(302, 61);
+            this.textBoxValorRecebido.Name = "textBoxValorRecebido";
+            this.textBoxValorRecebido.Size = new System.Drawing.Size(121, 30);
+            this.textBoxValorRecebido.TabIndex = 3;
+            this.textBoxValorRecebido.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
+            this.textBoxValorRecebido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // labelValorRecebido
+            // 
+            this.labelValorRecebido.AutoSize = true;
+            this.labelValorRecebido.Location = new System.Drawing.Point(297, 38);
+            this.labelValorRecebido.Name = "labelValorRecebido";
+            this.labelValorRecebido.Size = new System.Drawing.Size(126, 26);
+            this.labelValorRecebido.TabIndex = 5;
+            this.labelValorRecebido.Text = "Valor recebido:";
+            // 
+            // labelValorTotal
+            // 
+            this.labelValorTotal.AutoSize = true;
+            this.labelValorTotal.Location = new System.Drawing.Point(139, 38);
+            this.labelValorTotal.Name = "labelValorTotal";
+            this.labelValorTotal.Size = new System.Drawing.Size(93, 26);
+            this.labelValorTotal.TabIndex = 3;
+            this.labelValorTotal.Text = "Valor total:";
+            // 
+            // textBoxNumeroTicket
+            // 
+            this.textBoxNumeroTicket.Location = new System.Drawing.Point(8, 61);
+            this.textBoxNumeroTicket.Name = "textBoxNumeroTicket";
+            this.textBoxNumeroTicket.Size = new System.Drawing.Size(100, 30);
+            this.textBoxNumeroTicket.TabIndex = 1;
+            this.textBoxNumeroTicket.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // labelNumeroDoTicket
+            // 
+            this.labelNumeroDoTicket.AutoSize = true;
+            this.labelNumeroDoTicket.Location = new System.Drawing.Point(3, 38);
+            this.labelNumeroDoTicket.Name = "labelNumeroDoTicket";
+            this.labelNumeroDoTicket.Size = new System.Drawing.Size(103, 26);
+            this.labelNumeroDoTicket.TabIndex = 1;
+            this.labelNumeroDoTicket.Text = "N° do Ticket:";
+            // 
+            // subtituloLancamentoBalcao
+            // 
+            this.subtituloLancamentoBalcao.BackColor = System.Drawing.Color.White;
+            this.subtituloLancamentoBalcao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subtituloLancamentoBalcao.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtituloLancamentoBalcao.Location = new System.Drawing.Point(0, 0);
+            this.subtituloLancamentoBalcao.Name = "subtituloLancamentoBalcao";
+            this.subtituloLancamentoBalcao.Size = new System.Drawing.Size(606, 26);
+            this.subtituloLancamentoBalcao.TabIndex = 0;
+            this.subtituloLancamentoBalcao.Text = "Lançamento de recebimentos no balcão";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(617, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1035, 384);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.AutoSize = true;
+            this.panelHeader.Controls.Add(this.panelTituloSistema);
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1732, 87);
+            this.panelHeader.TabIndex = 4;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.painelHeader_paint);
             // 
             // panelTituloSistema
             // 
             this.panelTituloSistema.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panelTituloSistema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelTituloSistema.BackColor = System.Drawing.Color.Transparent;
             this.panelTituloSistema.Controls.Add(this.labelTituloSistema);
-            this.panelTituloSistema.Location = new System.Drawing.Point(172, 6);
+            this.panelTituloSistema.Location = new System.Drawing.Point(3, 3);
             this.panelTituloSistema.Name = "panelTituloSistema";
-            this.panelTituloSistema.Size = new System.Drawing.Size(429, 75);
+            this.panelTituloSistema.Size = new System.Drawing.Size(815, 75);
             this.panelTituloSistema.TabIndex = 1;
             // 
             // labelTituloSistema
@@ -228,207 +539,24 @@ namespace Eniato
             this.labelTituloSistema.ForeColor = System.Drawing.Color.White;
             this.labelTituloSistema.Location = new System.Drawing.Point(3, 5);
             this.labelTituloSistema.Name = "labelTituloSistema";
-            this.labelTituloSistema.Size = new System.Drawing.Size(423, 63);
+            this.labelTituloSistema.Size = new System.Drawing.Size(809, 63);
             this.labelTituloSistema.TabIndex = 0;
-            this.labelTituloSistema.Text = "SISTEMA ENIATO";
+            this.labelTituloSistema.Text = "SISTEMA ENIATO // LIVRO CAIXA";
             this.labelTituloSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panelLogo
+            // toolTip
             // 
-            this.panelLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelLogo.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogo.Controls.Add(this.pictureBoxLogo);
-            this.panelLogo.Location = new System.Drawing.Point(3, 6);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(163, 75);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxLogo.Image = global::Eniato.Properties.Resources.Asset_1_3x;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(163, 75);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 306);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(607, 295);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(607, 297);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(605, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lançamento de recebimentos no balcão";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "N° do Ticket:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(8, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 26);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Valor total:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(302, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 30);
-            this.textBox3.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 26);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Valor recebido:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(144, 61);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 30);
-            this.textBox4.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(457, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 30);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 26);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Desconto:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(3, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(599, 59);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Atenção: Você precisa retornar {dinheiro.retorno} ao cliente e ter certeza que en" +
-    "trou {dinheiro.recebido} no caixa.";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Font = new System.Drawing.Font("Poppins", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(0, 273);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(512, 22);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Caso o lançamento não possua ticket no Assina, desconsidere o campo N° do Ticket." +
-    "";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 109);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(188, 26);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Método de pagamento:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Cartão",
-            "Pix",
-            "Cheque",
-            "Outro"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 34);
-            this.comboBox1.TabIndex = 5;
+            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1732, 718);
-            this.Controls.Add(this.painelHeader);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.statusStrip1);
+            this.ClientSize = new System.Drawing.Size(1732, 894);
+            this.Controls.Add(this.panelHeader);
+            this.Controls.Add(this.tableLayoutPanelCentral);
+            this.Controls.Add(this.tableLayoutPanelLateral);
+            this.Controls.Add(this.statusStripInformacoes);
             this.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -436,17 +564,16 @@ namespace Eniato
             this.Name = "Dashboard";
             this.Text = "Ambiente de Desenvolvimento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.painelHeader.ResumeLayout(false);
+            this.statusStripInformacoes.ResumeLayout(false);
+            this.statusStripInformacoes.PerformLayout();
+            this.tableLayoutPanelLateral.ResumeLayout(false);
+            this.tableLayoutPanelCentral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContasAPagar)).EndInit();
+            this.panelLancamentoBalcao.ResumeLayout(false);
+            this.panelLancamentoBalcao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelHeader.ResumeLayout(false);
             this.panelTituloSistema.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,35 +581,44 @@ namespace Eniato
 
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel painelHeader;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.StatusStrip statusStripInformacoes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLateral;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCentral;
+        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelTituloSistema;
         private System.Windows.Forms.Label labelTituloSistema;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLicensa;
+        private System.Windows.Forms.Button buttonLancarRecebimento;
+        private System.Windows.Forms.Button buttonLancarDespesa;
+        private System.Windows.Forms.Button buttonChequesRecebidos;
+        private System.Windows.Forms.Button buttonChequesEmitidos;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.DataGridView dataGridViewContasAPagar;
+        private System.Windows.Forms.Panel panelLancamentoBalcao;
+        private System.Windows.Forms.Label subtituloLancamentoBalcao;
+        private System.Windows.Forms.TextBox textBoxValorRecebido;
+        private System.Windows.Forms.Label labelValorRecebido;
+        private System.Windows.Forms.Label labelValorTotal;
+        private System.Windows.Forms.Label labelNumeroDoTicket;
+        private System.Windows.Forms.Label labelTroco;
+        private System.Windows.Forms.TextBox textBoxDesconto;
+        private System.Windows.Forms.Label labelDesconto;
+        private System.Windows.Forms.Label labelNaoPossuaTicket;
+        private System.Windows.Forms.ComboBox comboBoxMetodoDePagamento;
+        private System.Windows.Forms.Label labelMetodoDePagamento;
+        private System.Windows.Forms.TextBox textBoxNumeroTicket;
+        private System.Windows.Forms.TextBox textBoxValorTotal;
+        private System.Windows.Forms.TextBox textBoxNumeroCheque;
+        private System.Windows.Forms.TextBox textBoxNumeroAgencia;
+        private System.Windows.Forms.TextBox textBoxNumeroBanco;
+        private System.Windows.Forms.Label labelNumeroCheque;
+        private System.Windows.Forms.Label labelNumeroAgencia;
+        private System.Windows.Forms.Label labelNumeroBanco;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDatadoPara;
+        private System.Windows.Forms.Label labelDatadoPara;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonLancarRecebimentoBalcao;
+        private System.Windows.Forms.Button buttonConfiguracao;
     }
 }
 
