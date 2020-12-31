@@ -93,26 +93,6 @@ namespace Eniato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Asset_4cheque_emitido {
-            get {
-                object obj = ResourceManager.GetObject("Asset 4cheque-emitido", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Asset_5cheque_recebido {
-            get {
-                object obj = ResourceManager.GetObject("Asset 5cheque-recebido", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Asset_6cheque_recebido {
             get {
                 object obj = ResourceManager.GetObject("Asset 6cheque-recebido", resourceCulture);
@@ -126,6 +106,16 @@ namespace Eniato.Properties {
         internal static System.Drawing.Bitmap Asset_7cheque_emitido {
             get {
                 object obj = ResourceManager.GetObject("Asset 7cheque-emitido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_8configuracao {
+            get {
+                object obj = ResourceManager.GetObject("Asset 8configuracao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
