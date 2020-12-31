@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Eniato
@@ -37,6 +33,23 @@ namespace Eniato
             {
                 e.Handled = true;
             }
+        }
+
+        public static decimal CalcularTroco(String valorTotal, String valorRecebido, String valorDesconto)
+        {
+            valorTotal = valorTotal.Replace(".", "");
+            valorRecebido = valorRecebido.Replace(".", "");
+            valorDesconto = valorDesconto.Replace(".", "");
+            decimal dinheiroRetorno = decimal.Parse(valorRecebido.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) -
+                    decimal.Parse(valorTotal.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) +
+                    decimal.Parse(valorDesconto.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+            return dinheiroRetorno;
+        }
+
+        public static int StringParaInt(String texto)
+        {
+            int valorConvertido = int.Parse(texto);
+            return valorConvertido;
         }
 
     }

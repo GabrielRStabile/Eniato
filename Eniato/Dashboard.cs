@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Eniato
@@ -16,7 +10,14 @@ namespace Eniato
         public Dashboard()
         {
             InitializeComponent();
+            this.textBoxValorRecebido.TextChanged += (s, e) => TextBoxValorRecebido_KeyPress();
+            this.textBoxDesconto.TextChanged += (s, e) => TextBoxDesconto_KeyPress();
+            Database.CriarConexao();
+            comboBoxMetodoDePagamento.DataSource = Database.GetMetodosPagamento();
+            comboBoxMetodoDePagamento.ValueMember = "codigo_tipo_pagamento";
+            comboBoxMetodoDePagamento.DisplayMember = "descricao";
         }
+
 
         // Background Gradiente
         private void painelHeader_paint(object sender, PaintEventArgs e)
@@ -53,33 +54,54 @@ namespace Eniato
 
         private void comboBoxMetodoDePagamento_TextUpdate(object sender, EventArgs e)
         {
-
-            if (this.comboBoxMetodoDePagamento.SelectedItem.ToString() == "Cheque") {
+            if (this.comboBoxMetodoDePagamento.Text == "Cheque")
+            {
                 textBoxNumeroBanco.Visible = true;
                 textBoxNumeroAgencia.Visible = true;
                 textBoxNumeroCheque.Visible = true;
                 maskedTextBoxDatadoPara.Visible = true;
+                textBoxNumeroConta.Visible = true;
                 labelNumeroBanco.Visible = true;
                 labelNumeroAgencia.Visible = true;
                 labelNumeroCheque.Visible = true;
                 labelDatadoPara.Visible = true;
-            } else
+                labelNumeroConta.Visible = true;
+            }
+            else
             {
                 textBoxNumeroBanco.Visible = false;
                 textBoxNumeroAgencia.Visible = false;
                 textBoxNumeroCheque.Visible = false;
                 maskedTextBoxDatadoPara.Visible = false;
+                textBoxNumeroConta.Visible = false;
                 labelNumeroBanco.Visible = false;
                 labelNumeroAgencia.Visible = false;
                 labelNumeroCheque.Visible = false;
                 labelDatadoPara.Visible = false;
+                labelNumeroConta.Visible = false;
             }
 
-            
+
         }
 
         private void buttonLancarRecebimentoBalcao_Click(object sender, EventArgs e)
         {
+            // Primeiro passo: Checar se tem ou não número do ticket no atendimento
+            String descricao;
+            decimal valorReceita;
+            int idPagamento;
+            bool result = int.TryParse(comboBoxMetodoDePagamento.SelectedValue.ToString(), out idPagamento);
+
+            if (textBoxNumeroTicket.Text != "")
+            {
+                descricao = "Ticket n°: " + textBoxNumeroTicket.Text;
+            }
+            else
+            {
+                descricao = "Atendimento sem geração de ticket";
+            }
+
+            // Segundo passo: Checar se todos os campos foram preenchidos
             if (textBoxValorTotal.Text == "" || textBoxValorTotal.Text == "0,00")
             {
                 MessageBox.Show("Você não preencheu o campo Valor Total ou deixou ele zerado");
@@ -101,27 +123,83 @@ namespace Eniato
                 {
                     MessageBox.Show("Você não preencheu o campo Nº do Banco");
                     textBoxNumeroBanco.Focus();
-                } else if (textBoxNumeroAgencia.Text == "")
+                }
+                else if (textBoxNumeroAgencia.Text == "")
                 {
                     MessageBox.Show("Você não preencheu o campo Nº da Agência");
                     textBoxNumeroAgencia.Focus();
-                } else if (textBoxNumeroCheque.Text == "")
+                }
+                else if (textBoxNumeroCheque.Text == "")
                 {
                     MessageBox.Show("Você não preencheu o campo Nº do Cheque");
                     textBoxNumeroCheque.Focus();
-                } else if (maskedTextBoxDatadoPara.MaskCompleted == false)
+                }
+                else if (maskedTextBoxDatadoPara.MaskCompleted == false)
                 {
                     MessageBox.Show("Você não preencheu o campo Datado para");
                     maskedTextBoxDatadoPara.Focus();
-                } else
+                }
+                else if (textBoxNumeroConta.Text == "")
                 {
+                    MessageBox.Show("Você não preencheu o campo N° da Conta");
+                    textBoxNumeroConta.Focus();
+                }
+                else
+                {
+                    int numeroBanco = Util.StringParaInt(textBoxNumeroBanco.Text);
+                    int numeroAgencia = Util.StringParaInt(textBoxNumeroAgencia.Text);
+                    int numeroCheque = Util.StringParaInt(textBoxNumeroCheque.Text);
+                    int numeroConta = Util.StringParaInt(textBoxNumeroConta.Text);
+                    String bomPara = DateTime.Parse(maskedTextBoxDatadoPara.Text).ToString("yyyy'-'MM'-'dd");
+                    String valorRecebido = textBoxValorRecebido.Text.Replace(".", "");
+                    String valorTotal = textBoxValorTotal.Text.Replace(".", "");
+                    Decimal valorCheque = decimal.Parse(valorRecebido.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+
                     MessageBox.Show("Passou no cheque");
+                    valorReceita = decimal.Parse(valorTotal.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - decimal.Parse(textBoxDesconto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+                    Database.LancarRecebimento(descricao, idPagamento, valorReceita, 1);
+                    Database.LancarCheque(numeroBanco, numeroAgencia, numeroCheque, numeroConta, bomPara, valorCheque);
+                    Database.LigarChequeReceita(Database.GetCodigoUltimoCheque(), Database.GetCodigoUltimaReceita());
+                    LimparCampos();
                 }
             }
             else
             {
-                MessageBox.Show("Passou");
+                valorReceita = decimal.Parse(textBoxValorTotal.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - decimal.Parse(textBoxDesconto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+
+                Database.LancarRecebimento(descricao, idPagamento, valorReceita, 1);
+                LimparCampos();
+                textBoxNumeroTicket.Focus();
             }
+        }
+
+        private void LimparCampos()
+        {
+            textBoxNumeroTicket.Clear();
+            textBoxValorTotal.Clear();
+            textBoxValorRecebido.Clear();
+            textBoxDesconto.Clear();
+            comboBoxMetodoDePagamento.SelectedItem = null;
+            textBoxNumeroBanco.Clear();
+            textBoxNumeroAgencia.Clear();
+            textBoxNumeroCheque.Clear();
+            textBoxNumeroConta.Clear();
+            maskedTextBoxDatadoPara.Clear();
+        }
+
+        private void TextBoxValorRecebido_KeyPress()
+        {
+            if (textBoxValorRecebido.Text != "")
+            {
+                labelTroco.Visible = true;
+                labelTroco.Text = "Atenção: Você precisa retornar " + Util.CalcularTroco(textBoxValorTotal.Text, textBoxValorRecebido.Text, textBoxDesconto.Text)
+                + " ao cliente.";
+            }
+        }
+        private void TextBoxDesconto_KeyPress()
+        {
+            labelTroco.Text = "Atenção: Você precisa retornar " + Util.CalcularTroco(textBoxValorTotal.Text, textBoxValorRecebido.Text, textBoxDesconto.Text)
+            + " ao cliente.";
         }
     }
 }

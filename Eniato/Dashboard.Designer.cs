@@ -42,6 +42,8 @@ namespace Eniato
             this.tableLayoutPanelCentral = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewContasAPagar = new System.Windows.Forms.DataGridView();
             this.panelLancamentoBalcao = new System.Windows.Forms.Panel();
+            this.textBoxNumeroConta = new System.Windows.Forms.TextBox();
+            this.labelNumeroConta = new System.Windows.Forms.Label();
             this.buttonLancarRecebimentoBalcao = new System.Windows.Forms.Button();
             this.maskedTextBoxDatadoPara = new System.Windows.Forms.MaskedTextBox();
             this.labelDatadoPara = new System.Windows.Forms.Label();
@@ -133,7 +135,7 @@ namespace Eniato
             this.buttonLancarDespesa.Location = new System.Drawing.Point(3, 132);
             this.buttonLancarDespesa.Name = "buttonLancarDespesa";
             this.buttonLancarDespesa.Size = new System.Drawing.Size(52, 123);
-            this.buttonLancarDespesa.TabIndex = 7;
+            this.buttonLancarDespesa.TabIndex = 13;
             this.toolTip.SetToolTip(this.buttonLancarDespesa, "Clique aqui para lançar uma despesa");
             this.buttonLancarDespesa.UseVisualStyleBackColor = true;
             // 
@@ -150,7 +152,7 @@ namespace Eniato
             this.buttonLancarRecebimento.Location = new System.Drawing.Point(3, 3);
             this.buttonLancarRecebimento.Name = "buttonLancarRecebimento";
             this.buttonLancarRecebimento.Size = new System.Drawing.Size(52, 123);
-            this.buttonLancarRecebimento.TabIndex = 6;
+            this.buttonLancarRecebimento.TabIndex = 12;
             this.toolTip.SetToolTip(this.buttonLancarRecebimento, "Clique aqui para lançar um recebimento");
             this.buttonLancarRecebimento.UseVisualStyleBackColor = true;
             // 
@@ -167,7 +169,7 @@ namespace Eniato
             this.buttonChequesRecebidos.Location = new System.Drawing.Point(3, 261);
             this.buttonChequesRecebidos.Name = "buttonChequesRecebidos";
             this.buttonChequesRecebidos.Size = new System.Drawing.Size(52, 123);
-            this.buttonChequesRecebidos.TabIndex = 8;
+            this.buttonChequesRecebidos.TabIndex = 14;
             this.buttonChequesRecebidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip.SetToolTip(this.buttonChequesRecebidos, "Clique aqui para consultar os cheques recebidos");
             this.buttonChequesRecebidos.UseVisualStyleBackColor = true;
@@ -185,7 +187,7 @@ namespace Eniato
             this.buttonChequesEmitidos.Location = new System.Drawing.Point(3, 390);
             this.buttonChequesEmitidos.Name = "buttonChequesEmitidos";
             this.buttonChequesEmitidos.Size = new System.Drawing.Size(52, 123);
-            this.buttonChequesEmitidos.TabIndex = 9;
+            this.buttonChequesEmitidos.TabIndex = 15;
             this.buttonChequesEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip.SetToolTip(this.buttonChequesEmitidos, "Clique aqui para consultar e lançar cheques emitidos");
             this.buttonChequesEmitidos.UseVisualStyleBackColor = true;
@@ -203,7 +205,7 @@ namespace Eniato
             this.buttonConfiguracao.Location = new System.Drawing.Point(3, 519);
             this.buttonConfiguracao.Name = "buttonConfiguracao";
             this.buttonConfiguracao.Size = new System.Drawing.Size(52, 123);
-            this.buttonConfiguracao.TabIndex = 10;
+            this.buttonConfiguracao.TabIndex = 16;
             this.buttonConfiguracao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip.SetToolTip(this.buttonConfiguracao, "Clique aqui para acessar as configurações");
             this.buttonConfiguracao.UseVisualStyleBackColor = true;
@@ -245,6 +247,8 @@ namespace Eniato
             // 
             this.panelLancamentoBalcao.BackColor = System.Drawing.Color.White;
             this.panelLancamentoBalcao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelLancamentoBalcao.Controls.Add(this.textBoxNumeroConta);
+            this.panelLancamentoBalcao.Controls.Add(this.labelNumeroConta);
             this.panelLancamentoBalcao.Controls.Add(this.buttonLancarRecebimentoBalcao);
             this.panelLancamentoBalcao.Controls.Add(this.maskedTextBoxDatadoPara);
             this.panelLancamentoBalcao.Controls.Add(this.labelDatadoPara);
@@ -273,30 +277,49 @@ namespace Eniato
             this.panelLancamentoBalcao.Size = new System.Drawing.Size(608, 384);
             this.panelLancamentoBalcao.TabIndex = 2;
             // 
+            // textBoxNumeroConta
+            // 
+            this.textBoxNumeroConta.Location = new System.Drawing.Point(212, 195);
+            this.textBoxNumeroConta.Name = "textBoxNumeroConta";
+            this.textBoxNumeroConta.Size = new System.Drawing.Size(117, 30);
+            this.textBoxNumeroConta.TabIndex = 21;
+            this.textBoxNumeroConta.Visible = false;
+            this.textBoxNumeroConta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
+            // 
+            // labelNumeroConta
+            // 
+            this.labelNumeroConta.AutoSize = true;
+            this.labelNumeroConta.Location = new System.Drawing.Point(206, 170);
+            this.labelNumeroConta.Name = "labelNumeroConta";
+            this.labelNumeroConta.Size = new System.Drawing.Size(107, 26);
+            this.labelNumeroConta.TabIndex = 22;
+            this.labelNumeroConta.Text = "N° da Conta:";
+            this.labelNumeroConta.Visible = false;
+            // 
             // buttonLancarRecebimentoBalcao
             // 
-            this.buttonLancarRecebimentoBalcao.Location = new System.Drawing.Point(8, 174);
+            this.buttonLancarRecebimentoBalcao.Location = new System.Drawing.Point(8, 186);
             this.buttonLancarRecebimentoBalcao.Name = "buttonLancarRecebimentoBalcao";
             this.buttonLancarRecebimentoBalcao.Size = new System.Drawing.Size(183, 39);
-            this.buttonLancarRecebimentoBalcao.TabIndex = 22;
+            this.buttonLancarRecebimentoBalcao.TabIndex = 10;
             this.buttonLancarRecebimentoBalcao.Text = "Lançar";
             this.buttonLancarRecebimentoBalcao.UseVisualStyleBackColor = true;
             this.buttonLancarRecebimentoBalcao.Click += new System.EventHandler(this.buttonLancarRecebimentoBalcao_Click);
             // 
             // maskedTextBoxDatadoPara
             // 
-            this.maskedTextBoxDatadoPara.Location = new System.Drawing.Point(456, 170);
+            this.maskedTextBoxDatadoPara.Location = new System.Drawing.Point(337, 196);
             this.maskedTextBoxDatadoPara.Mask = "00/00/0000";
             this.maskedTextBoxDatadoPara.Name = "maskedTextBoxDatadoPara";
             this.maskedTextBoxDatadoPara.Size = new System.Drawing.Size(118, 30);
-            this.maskedTextBoxDatadoPara.TabIndex = 21;
+            this.maskedTextBoxDatadoPara.TabIndex = 9;
             this.maskedTextBoxDatadoPara.ValidatingType = typeof(System.DateTime);
             this.maskedTextBoxDatadoPara.Visible = false;
             // 
             // labelDatadoPara
             // 
             this.labelDatadoPara.AutoSize = true;
-            this.labelDatadoPara.Location = new System.Drawing.Point(334, 173);
+            this.labelDatadoPara.Location = new System.Drawing.Point(332, 170);
             this.labelDatadoPara.Name = "labelDatadoPara";
             this.labelDatadoPara.Size = new System.Drawing.Size(111, 26);
             this.labelDatadoPara.TabIndex = 20;
@@ -308,7 +331,7 @@ namespace Eniato
             this.textBoxNumeroCheque.Location = new System.Drawing.Point(457, 134);
             this.textBoxNumeroCheque.Name = "textBoxNumeroCheque";
             this.textBoxNumeroCheque.Size = new System.Drawing.Size(117, 30);
-            this.textBoxNumeroCheque.TabIndex = 19;
+            this.textBoxNumeroCheque.TabIndex = 8;
             this.textBoxNumeroCheque.Visible = false;
             this.textBoxNumeroCheque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -317,7 +340,7 @@ namespace Eniato
             this.textBoxNumeroAgencia.Location = new System.Drawing.Point(328, 134);
             this.textBoxNumeroAgencia.Name = "textBoxNumeroAgencia";
             this.textBoxNumeroAgencia.Size = new System.Drawing.Size(117, 30);
-            this.textBoxNumeroAgencia.TabIndex = 18;
+            this.textBoxNumeroAgencia.TabIndex = 7;
             this.textBoxNumeroAgencia.Visible = false;
             this.textBoxNumeroAgencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -326,7 +349,7 @@ namespace Eniato
             this.textBoxNumeroBanco.Location = new System.Drawing.Point(211, 134);
             this.textBoxNumeroBanco.Name = "textBoxNumeroBanco";
             this.textBoxNumeroBanco.Size = new System.Drawing.Size(100, 30);
-            this.textBoxNumeroBanco.TabIndex = 17;
+            this.textBoxNumeroBanco.TabIndex = 6;
             this.textBoxNumeroBanco.Visible = false;
             this.textBoxNumeroBanco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -365,7 +388,8 @@ namespace Eniato
             this.textBoxValorTotal.Location = new System.Drawing.Point(144, 61);
             this.textBoxValorTotal.Name = "textBoxValorTotal";
             this.textBoxValorTotal.Size = new System.Drawing.Size(121, 30);
-            this.textBoxValorTotal.TabIndex = 13;
+            this.textBoxValorTotal.TabIndex = 2;
+            this.textBoxValorTotal.Text = "0,00";
             this.textBoxValorTotal.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
             this.textBoxValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -373,17 +397,11 @@ namespace Eniato
             // 
             this.comboBoxMetodoDePagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMetodoDePagamento.FormattingEnabled = true;
-            this.comboBoxMetodoDePagamento.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Cartão",
-            "Pix",
-            "Cheque",
-            "Outro"});
             this.comboBoxMetodoDePagamento.Location = new System.Drawing.Point(8, 134);
             this.comboBoxMetodoDePagamento.Name = "comboBoxMetodoDePagamento";
             this.comboBoxMetodoDePagamento.Size = new System.Drawing.Size(183, 34);
             this.comboBoxMetodoDePagamento.TabIndex = 5;
-            this.comboBoxMetodoDePagamento.TextChanged += new System.EventHandler(this.comboBoxMetodoDePagamento_TextUpdate);
+            this.comboBoxMetodoDePagamento.SelectedIndexChanged += new System.EventHandler(this.comboBoxMetodoDePagamento_TextUpdate);
             // 
             // labelMetodoDePagamento
             // 
@@ -428,6 +446,7 @@ namespace Eniato
             this.textBoxDesconto.Name = "textBoxDesconto";
             this.textBoxDesconto.Size = new System.Drawing.Size(121, 30);
             this.textBoxDesconto.TabIndex = 4;
+            this.textBoxDesconto.Text = "0,00";
             this.textBoxDesconto.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
             this.textBoxDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -446,6 +465,7 @@ namespace Eniato
             this.textBoxValorRecebido.Name = "textBoxValorRecebido";
             this.textBoxValorRecebido.Size = new System.Drawing.Size(121, 30);
             this.textBoxValorRecebido.TabIndex = 3;
+            this.textBoxValorRecebido.Text = "0,00";
             this.textBoxValorRecebido.TextChanged += new System.EventHandler(this.textBoxMascaraMoeda_TextChanged);
             this.textBoxValorRecebido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoNumero_KeyPress);
             // 
@@ -540,7 +560,7 @@ namespace Eniato
             this.labelTituloSistema.Location = new System.Drawing.Point(3, 5);
             this.labelTituloSistema.Name = "labelTituloSistema";
             this.labelTituloSistema.Size = new System.Drawing.Size(809, 63);
-            this.labelTituloSistema.TabIndex = 0;
+            this.labelTituloSistema.TabIndex = 11;
             this.labelTituloSistema.Text = "SISTEMA ENIATO // LIVRO CAIXA";
             this.labelTituloSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -619,6 +639,8 @@ namespace Eniato
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonLancarRecebimentoBalcao;
         private System.Windows.Forms.Button buttonConfiguracao;
+        private System.Windows.Forms.TextBox textBoxNumeroConta;
+        private System.Windows.Forms.Label labelNumeroConta;
     }
 }
 
