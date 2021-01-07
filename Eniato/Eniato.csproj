@@ -111,6 +111,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="view\despesas\Despesas_Listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\despesas\Despesas_Listar.Designer.cs">
+      <DependentUpon>Despesas_Listar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\receitas\Receitas_Listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\receitas\Receitas_Listar.Designer.cs">
+      <DependentUpon>Receitas_Listar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\receitas\Receitas_Adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\receitas\Receitas_Adicionar.Designer.cs">
+      <DependentUpon>Receitas_Adicionar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,10 +136,25 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="view\receitas\Receitas_Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\receitas\Receitas_Modificar.Designer.cs">
+      <DependentUpon>Receitas_Modificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="view\despesas\Despesas_Listar.resx">
+      <DependentUpon>Despesas_Listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\receitas\Receitas_Listar.resx">
+      <DependentUpon>Receitas_Listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\receitas\Receitas_Adicionar.resx">
+      <DependentUpon>Receitas_Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\receitas\Receitas_Modificar.resx">
+      <DependentUpon>Receitas_Modificar.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -187,6 +223,10 @@
     <Content Include="Asset-1.ico" />
     <Content Include="Asset-2312.ico" />
     <Content Include="Asset-423.ico" />
+    <None Include="Resources\icons8-edit-file-32.png" />
+    <None Include="Resources\icons8-edit-file-64.png" />
+    <None Include="Resources\icons8-add-file-32.png" />
+    <None Include="Resources\icons8-delete-file-32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

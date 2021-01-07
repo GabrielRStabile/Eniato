@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Eniato
@@ -50,6 +51,14 @@ namespace Eniato
         {
             int valorConvertido = int.Parse(texto);
             return valorConvertido;
+        }
+
+        public static DateTime StringParaData(String date)
+        {
+            DateTime theDate;
+            DateTime.TryParseExact(date, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out theDate);
+            return theDate;
+
         }
 
     }

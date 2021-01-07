@@ -138,6 +138,7 @@ namespace Eniato
             this.buttonLancarDespesa.TabIndex = 13;
             this.toolTip.SetToolTip(this.buttonLancarDespesa, "Clique aqui para lançar uma despesa");
             this.buttonLancarDespesa.UseVisualStyleBackColor = true;
+            this.buttonLancarDespesa.Click += new System.EventHandler(this.buttonLancarDespesa_Click);
             // 
             // buttonLancarRecebimento
             // 
@@ -155,6 +156,7 @@ namespace Eniato
             this.buttonLancarRecebimento.TabIndex = 12;
             this.toolTip.SetToolTip(this.buttonLancarRecebimento, "Clique aqui para lançar um recebimento");
             this.buttonLancarRecebimento.UseVisualStyleBackColor = true;
+            this.buttonLancarRecebimento.Click += new System.EventHandler(this.buttonLancarRecebimento_Click);
             // 
             // buttonChequesRecebidos
             // 

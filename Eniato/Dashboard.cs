@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eniato.view.despesas;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -12,7 +13,6 @@ namespace Eniato
             InitializeComponent();
             this.textBoxValorRecebido.TextChanged += (s, e) => TextBoxValorRecebido_KeyPress();
             this.textBoxDesconto.TextChanged += (s, e) => TextBoxDesconto_KeyPress();
-            Database.CriarConexao();
             comboBoxMetodoDePagamento.DataSource = Database.GetMetodosPagamento();
             comboBoxMetodoDePagamento.ValueMember = "codigo_tipo_pagamento";
             comboBoxMetodoDePagamento.DisplayMember = "descricao";
@@ -155,7 +155,6 @@ namespace Eniato
                     String valorTotal = textBoxValorTotal.Text.Replace(".", "");
                     Decimal valorCheque = decimal.Parse(valorRecebido.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
-                    MessageBox.Show("Passou no cheque");
                     valorReceita = decimal.Parse(valorTotal.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - decimal.Parse(textBoxDesconto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                     Database.LancarRecebimento(descricao, idPagamento, valorReceita, 1);
                     Database.LancarCheque(numeroBanco, numeroAgencia, numeroCheque, numeroConta, bomPara, valorCheque);
@@ -165,7 +164,8 @@ namespace Eniato
             }
             else
             {
-                valorReceita = decimal.Parse(textBoxValorTotal.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - decimal.Parse(textBoxDesconto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+                String valorTotal = textBoxValorTotal.Text.Replace(".", "");
+                valorReceita = decimal.Parse(valorTotal.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - decimal.Parse(textBoxDesconto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
                 Database.LancarRecebimento(descricao, idPagamento, valorReceita, 1);
                 LimparCampos();
@@ -200,6 +200,19 @@ namespace Eniato
         {
             labelTroco.Text = "Atenção: Você precisa retornar " + Util.CalcularTroco(textBoxValorTotal.Text, textBoxValorRecebido.Text, textBoxDesconto.Text)
             + " ao cliente.";
+        }
+
+        private void buttonLancarRecebimento_Click(object sender, EventArgs e)
+        {
+            FormReceitas formReceitas = new FormReceitas();
+            formReceitas.ShowDialog();
+            
+        }
+
+        private void buttonLancarDespesa_Click(object sender, EventArgs e)
+        {
+            FormDespesas formDespesas = new FormDespesas();
+            formDespesas.ShowDialog();
         }
     }
 }
